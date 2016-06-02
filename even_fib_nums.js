@@ -6,15 +6,35 @@
  * @return {Number} sum
  */
 function _sumFibs( maxFibValue ) {
-  var sum = 0;
 
-  // do your work here
+var sum = 0;
+var a = 0;
+var b = 1;
+var c = 0;
 
-  return sum;
+for (var i = 1; i <= maxFibValue; i++) {
+
+  sum = a + b;
+  a = b;
+  b = sum;
+
+  if (sum % 2 === 0) {
+
+    console.log(c);
+
+    c += sum;
+
+    }
+
+  }
+
+  return c;
+
 }
 
 // bonus round
 function _highestFibonacciNumber (maxFibValue){
+
   var highest = 0;
 
   //define your base case, validate your input
@@ -23,7 +43,7 @@ function _highestFibonacciNumber (maxFibValue){
   //do your work here
 
   return highest;
-};
+}
 
 /**
  * Do not modify code below.
@@ -33,3 +53,6 @@ module.exports = {
   sumFibs : _sumFibs,
   highestFibonacciNumber : _highestFibonacciNumber
 };
+
+console.log('line 54 ' + _sumFibs(13));
+console.log('line 55 ' + _sumFibs(34));

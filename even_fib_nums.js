@@ -10,25 +10,23 @@ function _sumFibs( maxFibValue ) {
 var sum = 0;
 var a = 0;
 var b = 1;
-var c = 0;
+var total = 0;
 
-for (var i = 1; i <= maxFibValue; i++) {
+while (b <= maxFibValue) {
 
-  sum = a + b;
+  total = a + b;
   a = b;
-  b = sum;
+  b = total;
 
-  if (sum % 2 === 0) {
+  if (total % 2 === 0) {
 
-    console.log(c);
-
-    c += sum;
-
-    }
+    sum += total;
 
   }
 
-  return c;
+}
+
+  return sum;
 
 }
 

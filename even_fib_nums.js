@@ -6,10 +6,21 @@
  * @return {Number} sum
  */
 function _sumFibs( maxFibValue ) {
-  let sum = 0;
+  let sum = 2;
 
   // do your work here
 
+  let first = 1;
+  let second = 2;
+  let third = 3;
+  for (let i = 1; third < maxFibValue; i++){
+    third = first + second;
+    first = second;
+    second = third;
+    if (third % 2 === 0){
+    sum = sum + third;
+    }
+  }
   return sum;
 }
 
